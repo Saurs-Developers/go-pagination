@@ -5,9 +5,9 @@ import (
 	"math"
 )
 
-type PaginatedResult struct {
+type PaginatedResult[T any] struct {
 	Pagination PaginationOutput `json:"pagination"`
-	Data       interface{}      `json:"data"`
+	Data       T                `json:"data"`
 }
 
 type PaginationOutput struct {

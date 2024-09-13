@@ -10,6 +10,11 @@ type PaginatedResult[T any] struct {
 	Data       T                `json:"data"`
 }
 
+type GenericPaginatedResult struct {
+	Pagination PaginationOutput `json:"pagination"`
+	Data       interface{}      `json:"data"`
+}
+
 type PaginationOutput struct {
 	Page       int    `json:"page"`
 	Size       int    `json:"size"`
